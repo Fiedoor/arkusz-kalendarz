@@ -9,10 +9,10 @@
 
 <body>
     <header>
-        <div>
+        <div id="left">
             <h1>Organizer:Sierpień</h1>
         </div>
-        <div>
+        <div id="mid">
             <form action="organizer.php" method="post">
                 <label for="wyd">Zapisz wydarzenie:
                     <input type="text" name="wyd">
@@ -20,7 +20,7 @@
                 <input type="submit" value="OK">
             </form>
         </div>
-        <div>
+        <div id="right">
             <img src="logo2.png" alt="sierpień">
         </div>
     </header>
