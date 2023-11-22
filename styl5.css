@@ -49,3 +49,9 @@ header {
     display: flex;
     flex-direction: row;
 }
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
