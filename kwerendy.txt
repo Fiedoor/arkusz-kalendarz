@@ -1,4 +1,4 @@
-Zapytanie 1: SELECT dataZadania FROM `zadania` WHERE miesiac='sierpien';
+Zapytanie 1: SELECT dataZadania,wpis FROM `zadania` WHERE miesiac='sierpien';
 Zapytanie 2: SELECT miesiac,rok FROM `zadania` WHERE dataZadania='2020-08-7';
 Zapytanie 3: SELECT miesiac, COUNT(miesiac) FROM `zadania` WHERE wpis LIKE 'Weterynarz%' GROUP BY miesiac;
 Zapytanie 4: UPDATE `zadania` SET `wpis`='Wycieczka:Zalew Mietkowski' WHERE dataZadania='2020-08-09';
