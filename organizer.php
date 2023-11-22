@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="pl">
+<?php
+$conn = mysqli_connect('localhost', 'root', '', 'kalendarz');
+if (isset($_POST['wyd'])) {
+    $wyd = $_POST['wyd'];
+    $q2 = "UPDATE `zadania` SET `wpis`='$wyd' WHERE dataZadania='2020-08-09'";
+    mysqli_query($conn, $q2);
+}
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -26,7 +34,15 @@
     </header>
     <main>
         <?php
-        //skrypt1
+        $q1 = "SELECT dataZadania,wpis FROM `zadania` WHERE miesiac='sierpien'";
+        $res = mysqli_query($conn, $q1);
+        foreach ($res as $row) {
+            echo "<div class='block'>";
+            echo "<h5>" . $row['dataZadania'] . "</h5>";
+            echo "<hp>" . $row['wpis'] . "</p>";
+            echo "</div>";
+        }
+        mysqli_close($conn);
         ?>
     </main>
     <footer>
